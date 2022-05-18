@@ -14,6 +14,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.goni99.designpro.service.GPS
 import com.goni99.major_project_app.databinding.ActivityMainBinding
+import com.goni99.major_project_app.view.BlindActivity
+import com.goni99.major_project_app.view.ClosetActivity
 import com.goni99.major_project_app.view.DryerActivity
 import com.goni99.major_project_app.view.WashingMachineActivity
 import com.goni99.major_project_app.viewmodel.MainViewModel
@@ -40,10 +42,6 @@ class MainActivity : GPS() {
             ViewModelProvider.NewInstanceFactory()
         ).get(MainViewModel::class.java)
 
-
-//        val lat:Double = 35.676880592203375
-//        val lon:Double = 139.77413537318625
-//        mainViewModel.loadWeatherData(lat,lon)
 
         intentActivity()
     }
@@ -72,11 +70,17 @@ class MainActivity : GPS() {
                 startActivity(intent)
             }
             dryingButton.setOnClickListener {
-                val intent2 = Intent(baseContext, DryerActivity::class.java)
-                startActivity(intent2)
+                val intent = Intent(baseContext, DryerActivity::class.java)
+                startActivity(intent)
             }
-//            closetButton.setOnClickListener {
-//            }
+            closetButton.setOnClickListener {
+                val intent = Intent(baseContext, ClosetActivity::class.java)
+                startActivity(intent)
+            }
+            blindButton.setOnClickListener {
+                val intent = Intent(baseContext, BlindActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 

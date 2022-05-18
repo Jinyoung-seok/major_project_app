@@ -22,7 +22,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:gravity="center"
-			android:text="옷장"
+			android:text="@string/closet"
 			android:textColor="@color/white"
 			android:textSize="35sp" />
 

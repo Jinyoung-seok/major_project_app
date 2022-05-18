@@ -1,4 +1,4 @@
-package com.example.mqtttestpro.mqtt
+package com.goni99.major_project_app.view
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Test</string>
     <string name="wash_helper">세탁도우미</string>
+    <string name="washing_machine">세탁기</string>
+    <string name="closet">옷장</string>
+    <string name="drying_lack">건조대</string>
+    <string name="blind">블라인드</string>
     <string name="weather_desc">빨래하기 좋은 날</string>
     <string name="temperature">20°C</string>
     <string name="location">서울시</string>
