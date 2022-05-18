@@ -18,7 +18,8 @@ import org.eclipse.paho.client.mqttv3.MqttMessage
 //화면디자인 - 화면에 있는 위젯들의 이벤트에 반응하는 처리만 구현
 class ClosetActivity : AppCompatActivity(), View.OnClickListener {
     val sub_topic = "iot/#"
-    val server_uri = "tcp://192.168.35.5:1883" //broker의 ip와 port
+    val serverUri = "tcp://아이피:포트"
+    // 예시) = "tcp://192.123.12.1:1883" (tcp 통신, 자신 ip, 포트)
     var mymqtt: MyMqtt? = null
 
 
@@ -29,7 +30,7 @@ class ClosetActivity : AppCompatActivity(), View.OnClickListener {
 
         val intent = intent
         //mqtt통신을 수행할 mqtt객체를 생성
-        mymqtt = MyMqtt(this, server_uri)
+        mymqtt = MyMqtt(this, serverUri)
         //브로커에서 메세지 전달되면 호출될 메소드를 넘기기
         mymqtt?.mySetCallback(::onReceived) //바이트코드를 아예 참조할 수 있게 사용 ( :: )
         //브로커연결

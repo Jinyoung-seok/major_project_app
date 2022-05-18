@@ -11,14 +11,15 @@ import org.eclipse.paho.client.mqttv3.MqttMessage
 
 class DryerActivity : AppCompatActivity(), View.OnClickListener {
     val sub_topic = "iot/#"
-    val server_uri = "tcp://192.168.45.85:1883"
+    val serverUri = "tcp://아이피:포트"
+    // 예시) = "tcp://192.123.12.1:1883" (tcp 통신, 자신 ip, 포트)
     var mymqtt: MyMqtt? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dryer)
 
-        mymqtt = MyMqtt(this, server_uri)
+        mymqtt = MyMqtt(this, serverUri)
         mymqtt?.mySetCallback(::onRecieved)
         mymqtt?.connect(arrayOf<String>(sub_topic))
         up.setOnClickListener(this)

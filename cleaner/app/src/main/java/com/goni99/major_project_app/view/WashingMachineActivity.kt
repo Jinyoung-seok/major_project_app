@@ -25,7 +25,8 @@ class WashingMachineActivity : AppCompatActivity() {
     }
 
     val subTopic = "iot/#"
-    val serverUri = "tcp://192.168.35.5:1883"
+    val serverUri = "tcp://아이피:포트"
+    // 예시) = "tcp://192.123.12.1:1883" (tcp 통신, 자신 ip, 포트)
     var myMqtt: MyMqtt? = null
 
     var height= 0
