@@ -20,9 +20,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test"
         android:usesCleartextTraffic="true">
-
-        <activity android:name="com.goni99.major_project_app.view.WashingMachineActivity"></activity>
-        <activity android:name="com.goni99.major_project_app.MainActivity">
+        <activity android:name=".view.BlindActivity"></activity>
+        <activity android:name=".view.DryerActivity"></activity>
+        <activity android:name=".view.WashingMachineActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
