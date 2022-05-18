@@ -18,7 +18,7 @@ import java.text.DecimalFormat
 
 // UI 관련 데이터를 저장하고 관리해주는 역할
 class MainViewModel : ViewModel() {
-    val apiKey = "92292a4dfc3d6d24228db2eb16f77ec6"
+    val apiKey = "openweatherAPI 사이트 API키"
     val baseUrl = "https://api.openweathermap.org"
     val K:Float = 273.15F
     val retrofit = Retrofit.Builder()
