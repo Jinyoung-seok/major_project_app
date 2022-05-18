@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.goni99.designpro.service.GPS
 import com.goni99.major_project_app.databinding.ActivityMainBinding
+import com.goni99.major_project_app.view.DryerActivity
 import com.goni99.major_project_app.view.WashingMachineActivity
 import com.goni99.major_project_app.viewmodel.MainViewModel
 import com.google.android.gms.location.*
@@ -70,8 +71,10 @@ class MainActivity : GPS() {
                 val intent = Intent(baseContext, WashingMachineActivity::class.java)
                 startActivity(intent)
             }
-//            dryingButton.setOnClickListener {
-//            }
+            dryingButton.setOnClickListener {
+                val intent2 = Intent(baseContext, DryerActivity::class.java)
+                startActivity(intent2)
+            }
 //            closetButton.setOnClickListener {
 //            }
         }
